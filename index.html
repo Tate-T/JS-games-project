@@ -10,13 +10,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script type="module" crossorigin src="/JS-games-project/assets/index-40135270.js"></script>
-    <link rel="stylesheet" href="/JS-games-project/assets/index-8d9303bb.css">
+    <script type="module" crossorigin src="/JS-games-project/assets/index-8681fde4.js"></script>
+    <link rel="stylesheet" href="/JS-games-project/assets/index-f0060a3b.css">
   </head>
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <div>
-    <!-- <section class="header">
+    <!-- <section id="header">
     <div class="container">
         <div class="header__components">
             <div class="header__component">
@@ -48,7 +48,7 @@
                         <div class="switch">
                           <div class="ball"></div>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="header__component-switch-item">
                     <p class="header__description">Вітаємо, User!</p>
@@ -86,12 +86,12 @@
         </svg>
     </form>
 </div>
-    <section class="header">
+    <section id="header">
     <div class="container">
         <div class="header__components">
             <div class="header__component">
                 <svg class="header__logo">
-                    <use href="/JS-games-project/assets/header-symbol-defs-8ad5f8c6.svg#logo"></use>
+                    <use href="/JS-games-project/assets/header-symbol-defs-2f7b438b.svg#logo"></use>
                 </svg>
             </div>
             <div class="header__component">
@@ -118,7 +118,7 @@
                         <div class="switch">
                           <div class="ball"></div>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="header__component-switch-item">
                     <p class="header__description">Вітаємо, User!</p>
@@ -135,7 +135,11 @@
         <h1 class="title__leap">Перевір в який рік ти народився</h1>
         <div class="leap__list">
             <input class="input__leap"  type="text" placeholder="Введіть рік народження" id="leap-input">
-            <button class="input-but__leap" type="button"></button>
+            <button class="input-but__leap" type="button">
+                <svg class="leap-year__svg">
+                    <use href="/JS-games-project/assets/calculator-of-time-0a9a5caa.svg#icon-dandruff"></use>
+                </svg>
+            </button>
             <p class="yesNo__leap" id="yes-no-leap">
 
             </p>
@@ -146,13 +150,19 @@
     <div class="container">
         <div class="guess-the-number__line"></div>
         <h1 class="guess-the-number__title">Вгадай число, яке загадав комп’ютер</h1>
-        <input type="text" class="guess-the-number__input" placeholder="Введіть число">
-        <button type="button" class="guess-the-number__button">
-            <svg class="guess-the-number__svg">
-                <use href="/JS-games-project/assets/guess-the-number-symbol-defs-470800e8.svg#icon-dandruff"></use>
-            </svg>
-        </button>
-        <p class="guess-the-number__text"></p>
+        <div class="guess-the-number__box">
+            <div>
+                <input type="text" class="guess-the-number__input" placeholder="Введіть число">
+                <button type="button" class="guess-the-number__button">
+                    <svg class="guess-the-number__svg">
+                        <use href="/JS-games-project/assets/guess-the-number-symbol-defs-470800e8.svg#icon-dandruff"></use>
+                    </svg>
+                </button>
+            </div>
+            <div>
+                <p class="guess-the-number__text"></p>
+            </div>
+        </div>
     </div>
 </section>
     <section id="prs__section">
@@ -234,7 +244,11 @@
     <div class="time-calculator__list">
         <ul class="time-input__list">
             <input class="input-time__calculator" type="text submit" placeholder="Введіть число" id="start-timer">
-            <button type="submit" class="time-button__calculator">  </button>
+            <button type="submit" class="time-button__calculator">
+                <svg class="time-calculator__svg">
+                    <use href="/JS-games-project/assets/calculator-of-time-0a9a5caa.svg#icon-dandruff"></use>
+                </svg>
+            </button>
         </ul>
             <img class="time-calc__stroke" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAACCAYAAACuT3kTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAfSURBVHgB7cchEQAACASwHcmJjiQCiJ8btNX57Uu8MqGqGQM28L6FAAAAAElFTkSuQmCC" alt="vector">
             <p class="time-calc__time">час</p>
@@ -246,8 +260,10 @@
     <div class="container">
         <div class="dino-line"></div>
         <h1 class="dino-title">Google динозавр</h1>
-        <canvas id="canvass" width="720" height="297"></canvas>
-        <button id="retryButton">Retry</button>
+        <div class="dino-game__box">
+            <canvas id="canvass" width="720" height="297"></canvas>
+            <button id="retryButton">Retry</button>
+        </div>
     </div>
 </section>
 
@@ -266,7 +282,7 @@
 </section>
     <section id="highest-number__section"></section>
     <div class="container">
-        <div class="line__prs"></div>
+        <div class="line__hn"></div>
     <h1 class="highest-number__title">Введіть три числа</h1>
     <ul class="input-num__list">
         <input class="input-num__calculator" type="text" placeholder="Введіть число" id="one-input">
@@ -305,7 +321,7 @@
 </section>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <section id="info__section">
-    <div class="info__container">
+    <div class="container">
         <div class="vector__scientist"></div>
         <h2 class="info__title">
             Обери вченого/их
