@@ -5,6 +5,9 @@
     margin-left: auto;
     margin-right: auto;
 }
+#soccer {
+    padding-top: 36px;
+}
 #field {
     position: relative;
     width: 720px;
@@ -22,6 +25,8 @@
     position: absolute;
     width: 50px;
     height: 50px;
+    // margin-top: 85px;
+    // margin-left: 92px;
 }
 .soccer__title {
     font-family: "Montserrat Alternates", sans-serif;
@@ -34,5 +39,5 @@
     height: 0.5px;
     width: 536px;
     margin: auto;
-    margin-top: 103px;
+    margin-top: 67px;
 }

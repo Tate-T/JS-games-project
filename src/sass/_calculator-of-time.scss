@@ -13,7 +13,9 @@
     margin: auto;
     margin-top: 36px;
 }
-
+#time-calculator__section {
+    padding-top: 36px;
+}
 .prs-button__item {
     list-style: none;
 }
@@ -38,7 +40,6 @@
     height: 0.5px;
     width: 536px;
     margin: auto;
-    margin-top: 36px;
 }
 .time-calculator__title {
     font-family: "Montserrat Alternates", solid;
@@ -110,4 +111,8 @@
     display: flex;
     justify-content: center;
     margin-top: 46px;
+}
+.time-calculator__svg {
+    width: 15px;
+    height: 15px;
 }

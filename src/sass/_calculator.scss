@@ -3,7 +3,9 @@
     height: 0.5px;
     width: 536px;
     margin: auto;
-    margin-top: 36px;
+}
+#calculator__section {
+    padding-top: 36px;
 }
 .calculator__title {
     display: flex;
@@ -19,7 +21,6 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-    margin-bottom: 36px;
 }
 
 .input__calculator {
