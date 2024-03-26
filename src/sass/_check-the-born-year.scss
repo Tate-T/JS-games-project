@@ -1,9 +1,11 @@
+#leap-year__section {
+    padding-top: 36px;
+}
 .games__leap {
     font-family: "Montserrat Alternates", solid;
     font-size: 24px;
     font-weight: 400;
     text-align: center;
-    margin-top: 36px;
     margin-bottom: 36px;
 }
 
@@ -27,7 +29,6 @@
     display: flex;
     justify-content: center;
     margin-right: 150px;
-    margin-bottom: 36px;
     margin-top: 36px;
     margin-left: 257px;
 }
@@ -65,4 +66,8 @@
     font-weight: 400;
     font-size: 16px;
     margin-left: 129px;
+}
+.leap-year__svg {
+    width: 15px;
+    height: 15px;
 }

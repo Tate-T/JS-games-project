@@ -12,6 +12,9 @@
     margin-bottom: 36px;
     font-family: "Montserrat Alternates", sans-serif;
 }
+#guess-the-number-section {
+    padding-top: 36px;
+}
 .guess-the-number__input {
     width: 115px;
     height: 35px;
@@ -40,9 +43,11 @@
     box-shadow: 3px 3px 0px 0px #00000040;
 }
 .guess-the-number__text {
-    margin-left: 602px;
-    margin-top: -25px;
     font-family: "Montserrat Alternates", sans-serif;
+}
+.guess-the-number__box {
+    display: flex;
+    gap: 202px;
 }
 .guess-the-number__svg {
     fill: #fff;

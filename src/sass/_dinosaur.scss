@@ -19,12 +19,15 @@
     display: block;
     margin: auto;
 }
-.container #retryButton {
+.dino-game__box #retryButton {
     position: relative;
 }
 #retryButton {
     display: none;
+    z-index: 1000;
     position: absolute;
+    margin-top: -100px;
+    margin-bottom: 160.5px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

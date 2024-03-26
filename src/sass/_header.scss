@@ -5,9 +5,11 @@
     margin-left: auto;
     margin-right: auto;
 }
+#header {
+    padding-top: 21px;
+}
 .header__components {
     display: flex;
-    margin-top: 21px;
 }
 .header__component {
     &:nth-child(2) {
@@ -20,6 +22,7 @@
 .header__logo {
     width: 93px;
     height: 38.15px;
+    fill: #fff;
 }
 .header__list {
     gap: 50px;
@@ -34,77 +37,48 @@
     font-size: 12px;
     font-family: "Montserrat Alternates", sans-serif;
 }
-// .header__modal-box {
-//     display: flex;
-// }
-// .header__open-modal-button {
-//     background-color: #fff;
-//     border: none;
-//     width: 10px;
-//     height: 10px;
-//     margin-top: 10px;
-// }
-// .header__opem-modal {
-//     font-size: 12px;
-//     font-family: "Montserrat Alternates", sans-serif;
-//     background-color: #fff;
-//     border: none;
-//     display: flex;
-//     margin-top: 10px;
-// }
-// .header__modal-text-svg {
-//     width: 5px;
-//     height: 9px;
-//     margin-left: 8px;
-// }
+.switch-container {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  .switch {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .ball {
+    width: 20px;
+    height: 20px;
+    background-color: #ffcc00; /* Яскравий колір */
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.3s ease, background-color 0.3s ease; /* Анімація для зміни кольору */
+    border: 2px solid #aa8926; /* Темний бордер */
+  }
+  
+  .switch.night .ball {
+    left: 100%;
+    transform: translateX(-100%); /* зміщення на 100% вправо */
+    background-color: #7b6f6f; /* Темний колір місяця */
+    border-color: #423b3b; /* Ще темніший бордер */
+  }
 .header__component-switch {
     display: flex;
     gap: 51px;
 }
-.header__component-switch-item {
+.header__description {
+    font-size: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
     width: 100px;
-}
-
-.header-backdrop {
-    // position: fixed;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    // background-color: rgba(0, 0, 0, 0.2);
-    width: 100%;
-    height: 100%;
-    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: 1000ms;
-    z-index: 1000;
-    margin-top: -20px;
-}
-.header-backdrop__background-modal{
-    position: absolute;
-    width: 160px;
-    height: 105px;
-    background-color: #fff;
-    margin-top: 32px;
-    left: 32%;
-    border: 1px solid;
-    border-top: none;
-    border-radius: 0 0 20px 20px;
-}
-.header-is-hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-.header-backdrop__list {
-    list-style: none;
-    align-items: center;
-    margin-top: 0px;
-}
-.header-backdrop__item {
-    align-items: center;
-    margin-bottom: 20px;
-    &:last-child {
-        margin-bottom: 0;
-    }
 }
 .display-none {
     display: none;
@@ -119,4 +93,8 @@
     background-color: #fff;
     border: none;
     margin-top: 10px;
+}
+option {
+    background-color: #fff;
+    border-radius: 0 20px 20px 0;
 }
