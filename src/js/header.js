@@ -165,13 +165,15 @@ document.querySelector('.switch').addEventListener('click', function() {
         soccer.style.backgroundColor = '#333';
 
         // Three-numbers
-        highestNumberSection.style.backgroundColor = '#333';
+        highestNumberSection.style.backgroundColor = '#333333';
+        document.querySelector("#highNum").style.backgroundColor = '#333'
+        
 
         // Our-team
         ourTeam.style.backgroundColor = '#333';
 
         // Pick-scientist
-        infoSection.style.backgroundColor = '#fff';
+        infoSection.style.backgroundColor = '#333';
 
         // Footer
         footer.style.backgroundColor = '#333';
