@@ -8,10 +8,13 @@ let dinoYSpeed = 0;
 let obstacles = [];
 const dinoImage = new Image();
 const cactusImage = new Image();
-dinoImage.src = "https://w7.pngwing.com/pngs/39/802/png-transparent-gray-dinosaur-illustration-tyrannosaurus-t-shirt-dino-t-rex-runner-2-lonely-t-rex-run-2-google-chrome-8-bit-game-angle-text-thumbnail.png"
-cactusImage.src = 'https://w7.pngwing.com/pngs/380/807/png-transparent-game-off-game-jam-gamedev-net-video-game-cactus-game-angle-text-thumbnail.png';
+dinoImage.src = "../images/dinosaur/dino-dino.png"
+cactusImage.src = "../images/dinosaur/cactus.png"
+// dinoImage.src = "https://w7.pngwing.com/pngs/39/802/png-transparent-gray-dinosaur-illustration-tyrannosaurus-t-shirt-dino-t-rex-runner-2-lonely-t-rex-run-2-google-chrome-8-bit-game-angle-text-thumbnail.png"
+// cactusImage.src = 'https://w7.pngwing.com/pngs/380/807/png-transparent-game-off-game-jam-gamedev-net-video-game-cactus-game-angle-text-thumbnail.png';
 let gameover = false;
 let gameStarted = false;
+let score = 0;
 
 let obstacleSpawnInterval = 100; // Інтервал між спавнами
 let obstacleSpawnCounter = 0; // Лічильник для відстеження інтервалу
@@ -34,7 +37,18 @@ document.addEventListener('keydown', event => {
 });
 
 function retry() {
-    document.location.reload();
+    resetGame(); // Скидання гри перед початком нової гри
+    document.getElementById('retryButton').style.display = 'none'; // Ховаємо кнопку Retry
+    draw();
+}
+
+function resetGame() {
+    gameover = false;
+    obstacles = [];
+    dinoY = canvas.height - 40;
+    dinoYSpeed = 0; // Скидаємо швидкість стрибка
+    isJumping = false; // Скидаємо прапорець, що динозавр у стрибку
+    obstacleSpawnCounter = 0; // Скидаємо лічильник спавну перешкод
 }
 
 function drawDino() {
@@ -85,6 +99,9 @@ function updateObstacles() {
     }
 
     obstacles = obstacles.filter(obstacle => obstacle.x > -obstacle.width);
+
+    // Збільшення лічильника балів при кожній новій перешкоді, яку динозаврик успішно проходить
+    score += 1;
 }
 
 function collisionDetection() {
@@ -103,10 +120,14 @@ function draw() {
     updateDino();
     updateObstacles();
     collisionDetection();
+    // Відображення лічильника балів
+    ctx.fillStyle = "#000000";
+    ctx.font = "16px Arial";
+    ctx.fillText("Score: " + score, 10, 20);
+
     if (!gameover) {
         requestAnimationFrame(draw);
     }
     obstacleSpawnCounter--; // Додайте цей рядок для обнулення лічильника під час кожної анімаційної кадру
 }
-
 document.getElementById('retryButton').onclick = retry;
