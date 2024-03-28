@@ -1,1 +1,56 @@
 @import 'modern-normalize/modern-normalize.css';
+
+.main-background {
+    background-image: url(../images/main/main-background.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.calculator-night {
+    padding-top: 36px;
+}
+.dinosaur-night {
+    padding-top: 36px;
+}
+.cheak-age-night {
+    padding-top: 36px;
+}
+.guess-number-night {
+    padding-top: 36px;
+}
+.time-calculator-night {
+    padding-top: 36px;
+}
+.prs-night {
+    padding-top: 36px;
+    margin: auto;
+}
+.soccer-night {
+    padding-top: 36px;
+}
+.three-numbers-night {
+    padding-top: 36px;
+    padding-bottom: 14px;
+}
+.our-team-night {
+    padding-top: 36px;
+}
+.scientist-night {
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+.night-section {
+    background-color: #333;
+    width: 1070px;
+    color: #fff;
+}
+.header-night {
+    background-color: #333;
+    color: #fff;
+}
+.footer-night{
+    background-color: #333;
+    color: #fff;
+}

@@ -97,41 +97,22 @@
 
 
 
-
-
+let cheakAgeNight = document.querySelector(".cheak-age-night")
+let guessNumberNight = document.querySelector(".guess-number-night")
+let prsNight = document.querySelector(".prs-night")
+let calculatorNight = document.querySelector(".calculator-night")
+let timeCalculatorNight = document.querySelector(".time-calculator-night")
+let dinosaurNight = document.querySelector(".dinosaur-night")
+let soccerNight = document.querySelector(".soccer-night")
+let threeNumbersNight = document.querySelector(".three-numbers-night")
+let ourTeamNight = document.querySelector(".our-team-night")
+let scientistNight = document.querySelector(".scientist-night")
 // Header
 let header = document.getElementById('header');
-let headerLogo = document.querySelector(".header__logo")
+let sort = document.getElementById("sort-select")
 
-// Cheak-your-born-age
-let leapYearSection = document.getElementById("leap-year__section")
 
-// guess-the-number
-let guessTheNumberSection = document.getElementById("guess-the-number-section")
 
-// prs__section
-let prsSection = document.getElementById("prs__section")
-
-// calculator
-let calculatorSection = document.getElementById("calculator__section")
-
-// calculator-of-time
-let timeCalculatorSection = document.getElementById("time-calculator__section")
-
-// Dino-game
-let dinoGame = document.getElementById("dino-game")
-
-// Soccer
-let soccer = document.getElementById("soccer")
-
-// Three-numbers
-let highestNumberSection = document.getElementById("highest-number__section")
-
-// Our-team
-let ourTeam = document.getElementById("our-team")
-
-// Pick-scientist
-let infoSection = document.getElementById("info__section")
 
 // Footer
 let footer = document.querySelector(".footer")
@@ -139,79 +120,46 @@ let footer = document.querySelector(".footer")
 document.querySelector('.switch').addEventListener('click', function() {
     this.classList.toggle('night');
     if (this.classList.contains('night')) {
+        cheakAgeNight.classList.add("night-section")
+        guessNumberNight.classList.add("night-section")
+        prsNight.classList.add("night-section")
+        calculatorNight.classList.add("night-section")
+        timeCalculatorNight.classList.add("night-section")
+        dinosaurNight.classList.add("night-section")
+        soccerNight.classList.add("night-section")
+        threeNumbersNight.classList.add("night-section")
+        ourTeamNight.classList.add("night-section")
+        scientistNight.classList.add("night-section")
+
+
+
+
         // Header
-        header.style.backgroundColor = '#333';
-        // headerLogo.src = './images/header/header-symbol-defs.svg#white-logo'
-        
-        // Cheak-your-born-age
-        leapYearSection.style.backgroundColor = '#333';
-
-        // guess-the-number
-        guessTheNumberSection.style.backgroundColor = '#333';
-
-        // prs__section
-        prsSection.style.backgroundColor = '#333';
-
-        // calculator
-        calculatorSection.style.backgroundColor = '#333';
-
-        // calculator-of-time
-        timeCalculatorSection.style.backgroundColor = '#333';
-
-        // Dino-game
-        dinoGame.style.backgroundColor = '#333';
-
-        // Soccer
-        soccer.style.backgroundColor = '#333';
-
-        // Three-numbers
-        highestNumberSection.style.backgroundColor = '#333';
-
-        // Our-team
-        ourTeam.style.backgroundColor = '#333';
-
-        // Pick-scientist
-        infoSection.style.backgroundColor = '#fff';
+        header.classList.add("header-night")
+        sort.style.backgroundColor = "#333"
+        sort.style.color = "#fff"
 
         // Footer
-        footer.style.backgroundColor = '#333';
+        footer.classList.add("footer-night")
     } else {
+        cheakAgeNight.classList.remove("night-section")
+        guessNumberNight.classList.remove("night-section")
+        prsNight.classList.remove("night-section")
+        calculatorNight.classList.remove("night-section")
+        timeCalculatorNight.classList.remove("night-section")
+        dinosaurNight.classList.remove("night-section")
+        soccerNight.classList.remove("night-section")
+        threeNumbersNight.classList.remove("night-section")
+        ourTeamNight.classList.remove("night-section")
+        scientistNight.classList.remove("night-section")
+
         // Header
-        header.style.backgroundColor = '#fff';
-        // headerLogo.src = "./images/header/header-symbol-defs.svg#logo"
-
-        // Cheak-your-born-age
-        leapYearSection.style.backgroundColor = '#fff';
-
-        // guess-the-number
-        guessTheNumberSection.style.backgroundColor = '#fff';
-
-        // prs__section
-        prsSection.style.backgroundColor = '#fff';
-
-        // calculator
-        calculatorSection.style.backgroundColor = '#fff';
-
-        // calculator-of-time
-        timeCalculatorSection.style.backgroundColor = '#fff';
-
-        // Dino-game
-        dinoGame.style.backgroundColor = '#fff';
-
-        // Soccer
-        soccer.style.backgroundColor = '#fff';
-
-        // Three-numbers
-        highestNumberSection.style.backgroundColor = '#fff';
-
-        // Our-team
-        ourTeam.style.backgroundColor = '#fff';
-
-        // Pick-scientist
-        infoSection.style.backgroundColor = '#fff';
-
+        header.classList.remove("header-night")
+        sort.style.backgroundColor = "#fff"
+        sort.style.color = "#333"
+        
         // Footer
-        footer.style.backgroundColor = '#fff';
+        footer.classList.remove("footer-night")
 
     }
 });

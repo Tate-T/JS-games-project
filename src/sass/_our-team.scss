@@ -21,7 +21,7 @@ body {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@ body {
     height: 1px;
     width: 536px;
     margin: auto;
-    margin-top: 36px;
+    // margin-top: 36px;
 }
 .worker-img {
     width: 150px;

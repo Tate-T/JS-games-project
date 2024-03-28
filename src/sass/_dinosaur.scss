@@ -4,7 +4,7 @@
     font-family: "Montserrat Alternates", sans-serif;
 }
 .dino-game {
-    margin-top: 36px;
+    // margin-top: 36px;
 }
 .container {
     max-width: 1090px;
@@ -17,28 +17,28 @@
 #canvass {
     border-bottom: 2px black solid;
     display: block;
-    margin: auto;
+    margin: 0 auto;
 }
 .dino-game__box #retryButton {
     position: relative;
 }
 #retryButton {
-    display: none;
-    z-index: 1000;
     position: absolute;
-    margin-top: -100px;
-    margin-bottom: 160.5px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: none; /* Початково ховаємо кнопку Retry */
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #d7d7d7;
-    color: black;
-    border-radius: 20px;
-    font-family: "Montserrat Alternates", sans-serif;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
     cursor: pointer;
+    border-radius: 5px;
     
+}
+#retryButton:hover {
+    background-color: #45a049;
 }
 .dino-line {
         background-color: #000000;
@@ -46,3 +46,25 @@
         width: 536px;
         margin: auto;
 }
+
+// .dino-info {
+//     position: relative;
+//     &::before {
+//         content: '';
+//     display: block;
+//     position: absolute;
+//     }
+// }
+// .overlay-text {
+//     position: absolute;
+//   background: rgba(47, 48, 58, 0.8);
+//   width: 100%;
+//   height: 70px;
+//   top: 50%;
+//   left: 50%;
+//   opacity: 0;
+//   transition: opacity 500ms;
+// }
+// .dino-info:hover .overlay-text {
+//     opacity: 1;
+// }
