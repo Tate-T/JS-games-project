@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script type="module" crossorigin src="/JS-games-project/assets/index-1f3f17c0.js"></script>
-    <link rel="stylesheet" href="/JS-games-project/assets/index-0ddea6ec.css">
+    <script type="module" crossorigin src="/JS-games-project/assets/index-09a19080.js"></script>
+    <link rel="stylesheet" href="/JS-games-project/assets/index-03fe2040.css">
   </head>
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
@@ -28,10 +28,10 @@
                 <ul class="header__list">
                     <li class="header__item">
                         <select id="sort-select">
-                            <option value="interactive">Інтерактив</option>
-                            <option value="number">Числовий</option>
-                            <option value="games">Ігровий</option>
-                            <option value="means">Ознайомчий</option>
+                            <option value="interactive" class="sort-option interactive">Інтерактив</option>
+                            <option value="number" class="sort-option">Числовий</option>
+                            <option value="games" class="sort-option">Ігровий</option>
+                            <option value="means" class="sort-option">Ознайомчий</option>
                         </select>
                     </li>
                     <li class="header__item">
@@ -98,10 +98,10 @@
                 <ul class="header__list">
                     <li class="header__item">
                         <select id="sort-select">
-                            <option value="interactive">Інтерактив</option>
-                            <option value="number">Числовий</option>
-                            <option value="games">Ігровий</option>
-                            <option value="means">Ознайомчий</option>
+                            <option value="interactive" class="sort-option interactive">Інтерактив</option>
+                            <option value="number" class="sort-option">Числовий</option>
+                            <option value="games" class="sort-option">Ігровий</option>
+                            <option value="means" class="sort-option">Ознайомчий</option>
                         </select>
                     </li>
                     <li class="header__item">
@@ -271,17 +271,19 @@
     <div class="container">
         <div class="dinosaur-night">
             <div class="dino-line"></div>
-            <div class="dino-mini-box">
-                <!-- <p class="overlay-text">sifnui</p> -->
-                <h1 class="dino-title">Google динозавр</h1>
-                <!-- <svg class="dino-info">
-                    <use href="./images/dinosaur/dino-symbol-defs.svg#icon-info"></use>
-                </svg> -->
+            <div class="dino-game__box">
+                <div class="dino-mini-box">
+                    <h1 class="dino-title">Google динозавр</h1>
+                    <div class="dino-overlay">
+                        <svg class="dino-info">
+                            <use href="/JS-games-project/assets/dino-symbol-defs-2433a61b.svg#icon-info"></use>
+                        </svg>
+                        <p class="dino-description">Щоб розпочати гру нажміть клавішу "W"</p>
+                    </div>
+                </div>
+                <canvas id="canvass" width="720" height="297"></canvas>
+                <button id="retryButton">Retry</button>
             </div>
-        <div class="dino-game__box">
-            <canvas id="canvass" width="720" height="297"></canvas>
-            <button id="retryButton">Retry</button>
-        </div>
         </div>
     </div>
 </section>
