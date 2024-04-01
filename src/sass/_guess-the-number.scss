@@ -45,6 +45,9 @@
 .guess-the-number__text {
     font-family: "Montserrat Alternates", sans-serif;
     margin-bottom: -14px;
+    opacity: 0;
+    color: #000000;
+    transition: opacity 500ms ease, color 500ms ease;
 }
 .guess-the-number__box {
     display: flex;

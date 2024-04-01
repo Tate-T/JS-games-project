@@ -102,6 +102,7 @@
     margin-left: 32px;
     margin-bottom: 53px;
     margin-right: 33px;
+    margin-right: -20px;
 }
 
 .time-calc__time {
@@ -111,6 +112,9 @@
     display: flex;
     justify-content: center;
     margin-top: 46px;
+    width: 120px;
+    margin-left: 20px;
+    // position: absolute;
 }
 .time-calculator__svg {
     width: 15px;

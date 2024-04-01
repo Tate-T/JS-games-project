@@ -110,6 +110,7 @@ let scientistNight = document.querySelector(".scientist-night")
 // Header
 let header = document.getElementById('header');
 let sort = document.getElementById("sort-select")
+let option = document.querySelector(".sort-option")
 
 
 
@@ -138,6 +139,8 @@ document.querySelector('.switch').addEventListener('click', function() {
         header.classList.add("header-night")
         sort.style.backgroundColor = "#333"
         sort.style.color = "#fff"
+        option.style.backgroundColor = "#333"
+        option.style.border = "2px #fff solid"
 
         // Footer
         footer.classList.add("footer-night")
@@ -157,6 +160,8 @@ document.querySelector('.switch').addEventListener('click', function() {
         header.classList.remove("header-night")
         sort.style.backgroundColor = "#fff"
         sort.style.color = "#333"
+        option.style.backgroundColor = "#fff"
+        option.style.border = "2px #000 solid"
         
         // Footer
         footer.classList.remove("footer-night")
