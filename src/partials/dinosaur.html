@@ -2,17 +2,19 @@
     <div class="container">
         <div class="dinosaur-night">
             <div class="dino-line"></div>
-            <div class="dino-mini-box">
-                <!-- <p class="overlay-text">sifnui</p> -->
-                <h1 class="dino-title">Google динозавр</h1>
-                <!-- <svg class="dino-info">
-                    <use href="./images/dinosaur/dino-symbol-defs.svg#icon-info"></use>
-                </svg> -->
+            <div class="dino-game__box">
+                <div class="dino-mini-box">
+                    <h1 class="dino-title">Google динозавр</h1>
+                    <div class="dino-overlay">
+                        <svg class="dino-info">
+                            <use href="./images/dinosaur/dino-symbol-defs.svg#icon-info"></use>
+                        </svg>
+                        <p class="dino-description">Щоб розпочати гру нажміть клавішу "W"</p>
+                    </div>
+                </div>
+                <canvas id="canvass" width="720" height="297"></canvas>
+                <button id="retryButton">Retry</button>
             </div>
-        <div class="dino-game__box">
-            <canvas id="canvass" width="720" height="297"></canvas>
-            <button id="retryButton">Retry</button>
-        </div>
         </div>
     </div>
 </section>

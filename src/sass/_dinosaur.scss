@@ -22,12 +22,15 @@
 .dino-game__box #retryButton {
     position: relative;
 }
+// #dino-game #retryButton {
+//     position: relative;
+// }
 #retryButton {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none; /* Початково ховаємо кнопку Retry */
+    display: none;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #4CAF50;
@@ -35,6 +38,7 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    margin-bottom: -39px;
     
 }
 #retryButton:hover {
@@ -46,25 +50,36 @@
         width: 536px;
         margin: auto;
 }
-
-// .dino-info {
-//     position: relative;
-//     &::before {
-//         content: '';
-//     display: block;
-//     position: absolute;
-//     }
-// }
-// .overlay-text {
-//     position: absolute;
-//   background: rgba(47, 48, 58, 0.8);
-//   width: 100%;
-//   height: 70px;
-//   top: 50%;
-//   left: 50%;
-//   opacity: 0;
-//   transition: opacity 500ms;
-// }
-// .dino-info:hover .overlay-text {
-//     opacity: 1;
-// }
+.dino-mini-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.dino-overlay {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+      }
+}
+.dino-info {
+    margin-top: 12.5px;
+    width: 20px;
+    height: 20px;
+}
+.dino-overlay:hover .dino-description {  
+    opacity: 1;
+}
+.dino-description {
+    opacity: 0;
+    position: absolute;
+    border-radius: 20px;
+    border: 1px #332d2d solid;
+    width: 200px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background-color: rgba($color: #332d2d, $alpha: 0.3);
+}

@@ -14,4 +14,7 @@ buttonGuess.addEventListener('click', (event) => {
         answerGuess.textContent = (guess > secretNumber) ? `Загадане число менше, ніж ${guess}` : `Загадане число більше, ніж ${guess}`;
         answerGuess.style.color = "#990000";
     }
+    setTimeout(() => {
+        answerGuess.style.opacity = 1;
+    }, 100); 
 });

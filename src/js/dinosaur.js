@@ -8,16 +8,16 @@ let dinoYSpeed = 0;
 let obstacles = [];
 const dinoImage = new Image();
 const cactusImage = new Image();
-dinoImage.src = "../images/dinosaur/dino-dino.png"
-cactusImage.src = "../images/dinosaur/cactus.png"
+dinoImage.src = "./images/dinosaur/dino.png"
+cactusImage.src = "./images/dinosaur/cactus.png"
 // dinoImage.src = "https://w7.pngwing.com/pngs/39/802/png-transparent-gray-dinosaur-illustration-tyrannosaurus-t-shirt-dino-t-rex-runner-2-lonely-t-rex-run-2-google-chrome-8-bit-game-angle-text-thumbnail.png"
 // cactusImage.src = 'https://w7.pngwing.com/pngs/380/807/png-transparent-game-off-game-jam-gamedev-net-video-game-cactus-game-angle-text-thumbnail.png';
 let gameover = false;
 let gameStarted = false;
 let score = 0;
 
-let obstacleSpawnInterval = 100; // Інтервал між спавнами
-let obstacleSpawnCounter = 0; // Лічильник для відстеження інтервалу
+let obstacleSpawnInterval = 100;
+let obstacleSpawnCounter = 0;
 
 function jump() {
     if (!isJumping && gameStarted) {
@@ -37,8 +37,8 @@ document.addEventListener('keydown', event => {
 });
 
 function retry() {
-    resetGame(); // Скидання гри перед початком нової гри
-    document.getElementById('retryButton').style.display = 'none'; // Ховаємо кнопку Retry
+    resetGame();
+    document.getElementById('retryButton').style.display = 'none';
     draw();
 }
 
@@ -46,9 +46,9 @@ function resetGame() {
     gameover = false;
     obstacles = [];
     dinoY = canvas.height - 40;
-    dinoYSpeed = 0; // Скидаємо швидкість стрибка
-    isJumping = false; // Скидаємо прапорець, що динозавр у стрибку
-    obstacleSpawnCounter = 0; // Скидаємо лічильник спавну перешкод
+    dinoYSpeed = 0;
+    isJumping = false;
+    obstacleSpawnCounter = 0;
 }
 
 function drawDino() {
@@ -79,20 +79,20 @@ function updateObstacles() {
 
     if (obstacleSpawnCounter <= 0) {
         if (Math.random() < 0.02) {
-            let numObstacles = Math.floor(Math.random() * 3) + 1; // Генеруємо випадкову кількість від 1 до 3
-            let lastObstacleX = canvas.width; // Зберігаємо x координату останнього куща для перевірки відступу
+            let numObstacles = Math.floor(Math.random() * 3) + 1;
+            let lastObstacleX = canvas.width; 
             for (let i = 0; i < numObstacles; i++) {
-                let minSpacing = 5; // Мінімальний відступ між кущами
-                let maxSpacing = 20; // Максимальний відступ між кущами
-                let spacing = minSpacing + Math.random() * (maxSpacing - minSpacing); // Випадкове значення відступу між кущами
+                let minSpacing = 5;
+                let maxSpacing = 20;
+                let spacing = minSpacing + Math.random() * (maxSpacing - minSpacing);
                 obstacles.push({
-                    x: lastObstacleX + spacing, // Додаємо випадковий відступ до x координати останнього куща
+                    x: lastObstacleX + spacing, 
                     width: 20 + Math.random() * 10,
                     height: 20 + Math.random() * 70
                 });
-                lastObstacleX = obstacles[obstacles.length - 1].x + obstacles[obstacles.length - 1].width; // Оновлюємо x координату останнього куща
+                lastObstacleX = obstacles[obstacles.length - 1].x + obstacles[obstacles.length - 1].width;
             }
-            obstacleSpawnCounter = obstacleSpawnInterval; // Скидаємо лічильник
+            obstacleSpawnCounter = obstacleSpawnInterval; 
         }
     } else {
         obstacleSpawnCounter--;
@@ -100,7 +100,7 @@ function updateObstacles() {
 
     obstacles = obstacles.filter(obstacle => obstacle.x > -obstacle.width);
 
-    // Збільшення лічильника балів при кожній новій перешкоді, яку динозаврик успішно проходить
+    
     score += 1;
 }
 
@@ -120,7 +120,6 @@ function draw() {
     updateDino();
     updateObstacles();
     collisionDetection();
-    // Відображення лічильника балів
     ctx.fillStyle = "#000000";
     ctx.font = "16px Arial";
     ctx.fillText("Score: " + score, 10, 20);
@@ -128,6 +127,6 @@ function draw() {
     if (!gameover) {
         requestAnimationFrame(draw);
     }
-    obstacleSpawnCounter--; // Додайте цей рядок для обнулення лічильника під час кожної анімаційної кадру
+    obstacleSpawnCounter--; 
 }
 document.getElementById('retryButton').onclick = retry;

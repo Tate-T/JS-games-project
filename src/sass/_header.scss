@@ -37,6 +37,10 @@
     font-size: 12px;
     font-family: "Montserrat Alternates", sans-serif;
 }
+.header__text:hover {
+    color: #8ACECF;
+    transition: 500ms;
+}
 .switch-container {
     width: 40px;
     height: 20px;
@@ -78,7 +82,7 @@
 .header__description {
     font-size: 12px;
     font-family: "Montserrat Alternates", sans-serif;
-    width: 100px;
+    width: 14000px;
 }
 .display-none {
     display: none;
@@ -93,8 +97,26 @@
     background-color: #fff;
     border: none;
     margin-top: 10px;
+    // width: 160px;
+    // padding-right: 60px;
+    font-family: "Montserrat Alternates", sans-serif;
+    transition: 500ms;
 }
-option {
+#sort-select:hover {
+    transition: 500ms;
+    color: #8ACECF;
+}
+.sort-option {
+    display: block;
     background-color: #fff;
+    // width: 160px;
     border-radius: 0 20px 20px 0;
+    border: 1px #000 solid;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+.user-name {
+    width: 100px;
 }
