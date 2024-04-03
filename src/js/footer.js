@@ -1,5 +1,6 @@
 // const gmail = document.querySelector(".footer__gmail-input").value
 // if (gmail.includes("@gmaii.com")) {
+  const footerInput = document.querySelector(".footer__gmail-input")
   const refs = {
     openModalBtn: document.querySelector('[data-open-modal]'),
     closeModalBtn: document.querySelector('[data-close-modal]'),
@@ -13,6 +14,7 @@
   
   function toggleModal() {
     refs.backdrop.classList.toggle('footer__is-hidden');
+    footerInput.value = ""
   }
   
   function logBackdropClick() {

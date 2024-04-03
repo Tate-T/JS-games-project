@@ -21,7 +21,7 @@ document.getElementById('equals').addEventListener('click', function() {
             result = "Invalid operation";
     }
     
-    document.getElementById('result-p').textContent = result;
+    document.getElementById('result-p').textContent = result.toFixed(5);
 });
 
 let buttons = document.querySelectorAll('.button__calculator');
